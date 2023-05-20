@@ -89,7 +89,8 @@ header {
 
 #menu-toggle {
     color: #fff;
-    background-color: transparent;
+    background-color: blue;
+    /* Change the button's background color to blue */
     border: none;
     font-size: 24px;
 }
@@ -118,4 +119,34 @@ header {
 
 .profile p {
     font-size: 16px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    /* Show the menu below the button */
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #000;
+    font-weight: bold;
 }
