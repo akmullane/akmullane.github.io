@@ -2566,6 +2566,7 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		
 	}
 
 		.image img {
@@ -2612,6 +2613,7 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+		
 
 /* List */
 
