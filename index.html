@@ -12,8 +12,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<form id="contact-form" method="post" action="send_email.php">
-
 	</head>
 	<body class="is-preload">
 
@@ -127,54 +125,66 @@
 						</div>
 					</section>
 
-				<!-- Three -->
+				<!-- Three -->			
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Please you message, I will get back to you as soon as possible.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-						
-										<li>
-											<h3>Email</h3>
-											<a href="mailto:amullane921@gmail.com">amullane921@gmail.com</a>
-										</li>
-										<br>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/akmullane/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="https://www.linkedin.com/in/akmullane/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
+						  <h2>Get in touch</h2>
+						  <p>Please leave your message, and I will get back to you as soon as possible.</p>
+						  <div class="split style1">
+							<section>
+							  <form method="POST" action="https://formspree.io/f/xzbqqjkv" onsubmit="submitForm(event)">
+								<input type="hidden" name="_subject" value="New form submission" />
+								<input type="text" name="_gotcha" style="display:none" />
+								<div class="fields">
+								  <div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" required />
+								  </div>
+								  <div class="field half">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" required />
+								  </div>
+								  <div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="5" required></textarea>
+								  </div>
+								</div>
+								<ul class="actions">
+								  <li><button type="submit" class="button submit">Send Message</button></li>
+								</ul>
+							  </form>
+							</section>
+							<script>
+							  function submitForm(event) {
+								event.preventDefault(); // Prevent the form from submitting normally
+					  
+								// Perform any additional processing or validation if needed
+					  
+								// Submit the form to Formspree
+								var form = event.target;
+								var formData = new FormData(form);
+								var xhr = new XMLHttpRequest();
+								xhr.open(form.method, form.action);
+								xhr.setRequestHeader('Accept', 'application/json');
+								xhr.onreadystatechange = function () {
+								  if (xhr.readyState !== XMLHttpRequest.DONE) return;
+								  if (xhr.status === 200) {
+									// Form submission successful, redirect to the "thankyou.html" page
+									window.location.href = "thankyou.html";
+								  } else {
+									// Form submission failed, handle the error
+									console.error('Form submission error:', xhr.status, xhr.statusText);
+									// You can display an error message or perform other actions here
+								  }
+								};
+								xhr.send(formData);
+							  }
+							</script>
+						  </div>
 						</div>
-					</section>
-
-			</div>
+					  </section>
+					  
+				
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
