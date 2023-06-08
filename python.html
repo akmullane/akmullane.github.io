@@ -1,1 +1,32 @@
-"Hello It's me"
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Python Project</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <h1>Welcome to My Python Project</h1>
+
+        <textarea id="python-code" placeholder="Enter your Python code here"></textarea>
+        <button id="run-button">Run</button>
+
+        <div id="output-container"></div>
+
+        <script>
+        $(document).ready(function() {
+            $('#run-button').click(function() {
+                var code = $('#python-code').val();
+                
+                $.ajax({
+                    url: '/execute',
+                    type: 'POST',
+                    data: {code: code},
+                    success: function(response) {
+                        $('#output-container').text(response);
+                    }
+                });
+            });
+        });
+    </script>
+    </body>
+</html>
