@@ -1,0 +1,305 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+    <title>Gain Diner Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 100px;
+
+
+        }
+
+        h1 {
+            font-family: 'Black Ops One', sans-serif;
+            color: red;
+            font-size: 72px;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        h2 {
+            color: red;
+
+        }
+
+        h3 {
+            color: red;
+            text-align: left;
+            margin: 0;
+            margin-left: 30px;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+            margin-left: 50px;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        span.bold-lightcoral {
+            font-weight: bold;
+            color: lightcoral;
+        }
+
+        .section-divider {
+            border-top: 2px dashed lightcoral;
+            margin: 20px 0;
+        }
+
+        /* -------------------------------------- */
+
+        #summary {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .restaurant-name {
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f38b8b;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        /* -------------------------------------- */
+    </style>
+
+<body>
+    <h1>Welcome to GAIN Diner</h1>
+    <p style="text-align: center;">____________________________________________________________</p>
+    <form action="https://formspree.io/f/xzbqqjkv" method="POST">
+        <h2>Breakfast</h2>
+        <h3>1.Bread</h3>
+        <label>
+            <input type="checkbox" name="items" value="Waffle"> <span class="bold-lightcoral">Waffle</span> : A classic
+            fluffy waffle served with your choice of toppings.
+        </label>
+        <label>
+            <input type="checkbox" name="items" value="Pancake"> <span class="bold-lightcoral">Pancake</span> : Thick
+            and
+            delicious pancakes with various syrup options.
+        </label>
+        <label>
+            <input type="checkbox" name="items" value="Toast"> <span class="bold-lightcoral">Toast</span> : Your choice
+            of bread, toasted to perfection.
+        </label>
+
+        <h3>2.Egg</h3>
+        <label>
+            <input type="checkbox" name="items" value="Scramble"> <span class="bold-lightcoral">Scramble Egg</span> :
+            Fluffy
+            scrambled eggs cooked to your preference.
+        </label>
+        <label>
+            <input type="checkbox" name="items" value="Over Easy"> <span class="bold-lightcoral">Egg Over Easy</span> :
+            Fried
+            eggs with a runny yolk, cooked just right.
+        </label>
+
+        <h3>3.Meat</h3>
+        <label>
+            <input type="checkbox" name="items" value="Bacon"> <span class="bold-lightcoral">Bacon</span> : Crispy
+            strips
+            of bacon.
+        </label>
+        <label>
+            <input type="checkbox" name="items" value="Sausage"> <span class="bold-lightcoral">Sausage</span> : Savory
+            sausage links.
+        </label>
+        <label>
+            <input type="checkbox" name="items" value="Taylor Ham"> <span class="bold-lightcoral">Taylor Ham</span> : A
+            regional favorite - grilled taylor ham slices.
+        </label>
+        <h3>4.Fries</h3>
+        <label>
+            <input type="checkbox" name="items" value="Fried"> <span class="bold-lightcoral">Fried</span> : Crispy fried
+            potato cubes.
+        </label>
+        <label>
+            <input type="checkbox" name="items" value="Potato Skins"> <span class="bold-lightcoral">Potato
+                Skins</span> : Potato skins loaded with cheese, bacon, and sour cream.
+        </label>
+
+        <div class="section-divider"></div>
+
+        <!-- Add more form elements for sides and drinks -->
+        <div class="menu-section">
+            <h2>Appetizers</h2>
+            <label>
+                <input type="checkbox" name="items" value="Mozzarella Sticks"> <span class="bold-lightcoral">Mozzarella
+                    Sticks</span>: Crispy and cheesy mozzarella sticks served with marinara sauce.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Potato Skins"> <span class="bold-lightcoral">Potato
+                    Skins</span>: Crispy potato skins loaded with cheese and bacon.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Chicken Nuggets"> <span class="bold-lightcoral">Chicken
+                    Nuggets</span>: Bite-sized and crispy chicken nuggets.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Sliders"> <span class="bold-lightcoral">Sliders</span>: Mini
+                sandwiches with various fillings.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Hot Pocket"> <span class="bold-lightcoral">Hot Pocket</span>:
+                Flaky pastry filled with savory ingredients.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Soup of the Day"> <span class="bold-lightcoral">Soup of the
+                    Day</span>: A comforting bowl of the chef's daily soup creation.
+            </label>
+        </div>
+
+        <div class="section-divider"></div>
+        <h2>Lunch & Dinner</h2>
+        <div class="menu-section">
+            <label>
+                <input type="checkbox" name="items" value="Cheese Steam"> <span class="bold-lightcoral">Cheese
+                    Steam</span>: Steamed vegetables served with a side of melted cheese.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Grilled Cheese"> <span class="bold-lightcoral">Grilled
+                    Cheese</span>: A classic grilled cheese sandwich with melted cheese oozing out.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Ham Cheese Sandwich"> <span class="bold-lightcoral">Ham
+                    Cheese Sandwich</span>: Grilled sandwich with ham and cheese.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Hotdog"> <span class="bold-lightcoral">Hotdog</span>: Juicy
+                hotdog served with various toppings.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Pizza"> <span class="bold-lightcoral">Pizza</span>: Handmade
+                pizza with a selection of toppings.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Spaghetti Meatball by Chef Boiyodi"> <span
+                    class="bold-lightcoral">Spaghetti Meatball by Chef Boiyodi</span>: Chef's special spaghetti and
+                meatball dish.
+            </label>
+        </div>
+
+        <div class="section-divider"></div>
+        <h2>Drinks</h2>
+        <div class="menu-section">
+            <label>
+                <input type="checkbox" name="items" value="Chai Tea"> <span class="bold-lightcoral">Chai Tea</span>: A
+                warm and spiced chai tea.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Green Tea"> <span class="bold-lightcoral">Green Tea</span>: A
+                soothing cup of green tea.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Soda"> <span class="bold-lightcoral">Soda</span>: Various
+                carbonated beverage options.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Gatorade"> <span class="bold-lightcoral">Gatorade</span>:
+                Energizing Gatorade flavors.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Juice of the Day"> <span class="bold-lightcoral">Juice of the
+                    Day</span>: Freshly squeezed juice of the day.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Milk"> <span class="bold-lightcoral">Milk</span>: Cold milk
+                options.
+            </label>
+        </div>
+
+        <div class="section-divider"></div>
+        <div id="summary"></div>
+
+        <div class="name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="pickup-time">Pickup Time:</label>
+            <input type="time" id="pickup-time" name="pickup-time" required>
+            <br>
+            <br>
+            <button class="order-button" type="submit">Place Order</button>
+        </div>
+    </form>
+
+    <div class="footer">
+        <p class="disclaimer">
+            Please let your server know if you have any dietary preferences or allergies.
+            Enjoy your meal at <span class="restaurant-name">GAIN Diner</span>!
+        </p>
+        <img src="BOSS.jpg" alt="A delicious meal at Gain Diner">
+        <img src="BIGBOSS.jpg" alt="A delicious meal at Gain Diner">
+    </div>
+
+    <!--  --------------------------------------   -->
+
+    <script>
+        const form = document.getElementById("order-form");
+        const summaryDiv = document.getElementById("summary");
+
+        const checkboxes = document.querySelectorAll('input[name="items"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("input", updateSummary);
+        });
+
+        function updateSummary() {
+            const selectedItems = Array.from(document.querySelectorAll('input[name="items"]:checked')).map(input => input.parentNode.querySelector('.bold-lightcoral').textContent.trim() + input.nextSibling.textContent.trim());
+            const summaryContent = selectedItems.length > 0 ? "<h3>Order Summary:</h3><ul><li>" + selectedItems.join("</li><li>") + "</li></ul>" : "";
+            summaryDiv.innerHTML = summaryContent;
+        }
+    </script>
+    <!--  --------------------------------------   -->
+</body>
+
+</html>

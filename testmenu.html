@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gain Diner Menu</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Gain Diner Menu</h1>
+
+    <div class="menu-section">
+        <div class="menu-item">
+            <h3 style="text-align: left; margin: 0;">1.</h3>
+            <label>
+                <input type="checkbox" name="items" value="Waffle"> <span class="bold-lightcoral">Waffle:</span> A
+                classic fluffy waffle served with your choice of toppings.
+            </label>
+            <label>
+                <input type="checkbox" name="items" value="Waffle"> <span class="bold-lightcoral">Waffle:</span> A
+                classic fluffy waffle served with your choice of toppings.
+            </label>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <form action="formspree-link-here" method="POST" id="order-form">
+            <!-- Input fields for name and pickup time here -->
+
+            <div id="summary"></div>
+            <button class="order-button" type="submit">Place Order</button>
+        </form>
+
+        <script>
+            const form = document.getElementById("order-form");
+            const summaryDiv = document.getElementById("summary");
+
+            const checkboxes = document.querySelectorAll('input[name="items"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener("input", updateSummary);
+            });
+
+            function updateSummary() {
+                const selectedItems = Array.from(document.querySelectorAll('input[name="items"]:checked')).map(input => input.parentNode.querySelector('.bold-lightcoral').textContent.trim() + input.nextSibling.textContent.trim());
+                const summaryContent = selectedItems.length > 0 ? "<h3>Order Summary:</h3><ul><li>" + selectedItems.join("</li><li>") + "</li></ul>" : "";
+                summaryDiv.innerHTML = summaryContent;
+            }
+        </script>
+
+</body>
+
+</html>
