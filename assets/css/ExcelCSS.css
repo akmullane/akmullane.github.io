@@ -1,0 +1,62 @@
+body {
+    background-color: #89c4a7;
+    /* Background color */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #4a90e2;
+    /* Text color */
+    text-align: center;
+}
+
+#inventoryForm {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #4a90e2;
+    /* Input field border color */
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4a90e2;
+    /* Button color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #356b9c;
+    /* Button color on hover */
+}
+
+h2 {
+    color: #4a90e2;
+    /* Text color */
+}
+
+#inventoryList {
+    list-style-type: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 0 auto;
+}
